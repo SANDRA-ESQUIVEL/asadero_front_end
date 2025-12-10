@@ -1,0 +1,576 @@
+/*PAGINA MENÚ*/
+/*Toda la pagina*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+/*Nombre del asadero y rol*/
+.titulo_asadero{
+    border: 6px solid black;
+    width: auto;
+    height: auto;
+    padding: 4px;
+    font-size: 13px;
+    background-color: rgb(139, 2, 2);
+    color: white;
+}
+
+/*header dimensiones para que las imagenes queden en fila y unidas*/
+header div {
+    border-bottom:4px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*medidas de las tres imagenes del logotipo*/
+.logo_arriba {
+    width: 600px;
+    height: 200px ;
+}
+
+/*main*/
+main {
+    display: flex;
+    padding: 5px;
+}
+
+/*caja donde se encuentran las opciones*/
+.sidebar {
+    width: 250px;
+    border: 4px solid black;
+    padding: 10px;
+    height: auto;
+    font-size: 25;    
+}
+
+/*caja donde se encuentra Rol y nombre de usuario*/
+.user-info {
+    text-align: center;
+    border: 4px solid black;
+    padding: 8px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/*cajas de las opciones*/
+.menu-item {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 8px;
+    text-align: left;
+    background-color: white;
+    border: 3px solid black;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+/*hover*/
+.menu-item:hover {
+    background-color: rgba(20, 1, 124, 0.993);
+    color: white ;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4); /* Más sombra al pasar el mouse */
+}
+
+/*boton cerrar*/
+.menu-itemcerrar {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 8px;
+    text-align: left;
+    background-color: rgb(139, 2, 2);
+    color: white;
+    border: 3px solid black;
+    font-size: 20px;
+    text-align: center;    
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+/*hover*/
+.menu-itemcerrar:hover {
+    background-color: white;
+    color: rgb(139, 2, 2) ;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4); /* Más sombra al pasar el mouse */
+}
+
+/*SUBMENUS*/
+/*medidas de las cajas de las opciones de despliegue*/
+.submenu {
+    display: none;
+    padding-left: 10px;
+}
+
+/*opciones de despliegue de cada gestion*/
+.submenu button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+/*hover*/
+.submenu button:hover {
+    background-color: #3da6fc;
+}
+
+/*pie de pagina*/
+footer {
+    border-top: 4px solid black;
+    padding: 10px;
+    text-align: center;
+    background-color: burlywood ;
+}
+
+
+
+/*VENTANAS MODAL CREAR USUARIOS*/
+/*Estilos de modal*/
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Fondo oscuro semi-transparente */
+}
+
+/*cuerpo de ventana*/
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 50px;
+    border: 4px solid #000;
+    width: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+
+/*cerrar pestaña*/
+.close {
+    color: #000000;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*hover*/
+.close:hover {
+    color: red;
+}
+
+/*caja de fecha a la izquierda*/
+.casilla_fecha {
+    width:max-content;
+    height: 80px;
+    padding-left: 470px;
+}
+
+/*caja de numero de documento y seleccion del ID*/
+.casillas {
+    display: flex;         
+    flex-direction: row;  
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+/*casilla de Número de documento*/
+.celdaid{
+
+    flex: 2; 
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*casilla de Seleccion de tipo de documento*/
+.seleccionid{
+    margin-top: 30px;
+    flex: 1; 
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/*celdas del modal paso 2*/
+.modal input, .modal select {
+    width: 100%;
+    padding: 5px;
+}
+
+/*botones atras, siguiente y cancelar*/
+.botones_final {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;               
+    margin-top: 40px;
+}
+
+/*botones atras, siguiente y cancelar*/
+.botones_final button {      
+    width: 150px;
+    height: auto;
+    font-size: 20px; 
+}
+
+/*boton Atras*/
+.btn-atras {
+    border: 3px solid black;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    justify-content: center;
+    color: #000;
+}
+/*hover*/
+.btn-atras:hover {
+  background-color: rgba(20, 1, 124, 0.993);
+  color: white;
+}
+
+/*boton siguiente*/
+.btn-seleccionar {
+    border: 3px solid black;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    justify-content: center;
+    color: #000;
+}
+/*hover*/
+.btn-seleccionar:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+/*boton cancelar*/
+.btn-cancelar {
+    border: 3px solid black;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    justify-content: center;
+    color: #000; 
+}
+/*hover*/
+.btn-cancelar:hover {
+    background-color: rgb(139, 2, 2);
+    color: white;
+}
+
+/*boton Crear Usuario*/
+.btn-crear_usuario {
+    border: 3px solid black;
+    padding: 10px 40px;
+    margin-right: 10px;
+    cursor: pointer;
+    justify-content: center;
+    color: #000;
+}
+/*hover*/
+.btn-crear_usuario:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+/*casillas de funciones*/
+.permiso {
+    display:block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Estilo por defecto: gris (como desactivado) */
+.permiso span {
+    color: black;
+    font-weight: normal;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+
+/* Check más visible */
+.permiso input[type="checkbox"] {
+    transform: scale(1.3);
+    cursor: pointer;
+    accent-color: green;
+}
+
+/* Cuando el checkbox esté marcado → letras verdes y en negrita */
+.permiso input[type="checkbox"]:checked ~ span {
+    color: green;
+    font-weight: bold;
+}
+
+
+/*VENTANAS MODAL MODIFICAR USUARIOS*/
+.modalmod {
+    display: none; 
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/*Cuerpo del modal*/
+.modalmod-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 50px;
+    border: 4px solid #000;
+    width: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    height: auto;
+}
+
+.modalmod-content h2 {
+    color: black;
+    text-align: center;
+}
+
+/*celdas del modal paso 2*/
+.modalmod input, .modalmod select {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+/*Cuadros de usuarios*/
+.usuarios-lista {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 80px 0;
+}
+
+
+/*Casillas de cada usuario modificar*/
+.usuario-card {
+  width: 150px;
+  height: 60px;
+  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border: 4px solid black;
+  border-radius: 8px ;
+  background: #f4b4b4;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+/*hover usuarios*/
+.usuario-card:hover{
+    background-color: rgb(126, 10, 64);
+    color: white;
+}
+
+/*Usuario seleccionado*/
+.usuario-card.seleccionado {
+    border: 6px solid black;
+    background: rgb(126, 10, 64);
+    color: white;
+    transform: scale(1.02);
+}
+
+/*boton modificarr*/
+.btn-modificar {
+    border: 3px solid black;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 20px;
+    color: #000; 
+}
+/*hover*/
+.btn-modificar:hover {
+    background-color: rgb(126, 10, 64);
+    color: white;
+}
+
+/*boton eliminar*/
+.btn-eliminar {
+    border: 3px solid black;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 20px;
+    color: #000; 
+}
+/*hover*/
+.btn-eliminar:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+/*Casillas de cada usuario eliminar*/
+.usuario-eliminar {
+  width: 150px;
+  height: 60px;
+  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border: 4px solid black;
+  border-radius: 8px ;
+  background: #f4b4b4;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+/*hover usuarios*/
+.usuario-eliminar:hover{
+    border: 4px solid green;
+}
+
+/*Usuario seleccionado eliminar*/
+.usuario-eliminar.seleccionado {
+    border: 6px solid green;
+}
+
+/*boton desactivar*/
+.btn-desactivar {
+    border: 3px solid black;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 20px;
+    color: #000; 
+}
+/*hover*/
+.btn-desactivar:hover {
+    background-color: rgb(230, 150, 2);
+    color: white;
+}
+
+/*Casillas de cada usuario eliminar*/
+.usuario-desactivar {
+  width: 150px;
+  height: 60px;
+  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border: 4px solid black;
+  border-radius: 8px ;
+  background: #f4b4b4;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+/*hover usuarios*/
+.usuario-desactivar:hover{
+    border: 4px solid  rgb(230, 150, 2);
+}
+
+/*Usuario seleccionado*/
+.usuario-desactivar.seleccionado {
+    border: 6px solid rgb(230, 150, 2);
+}
+
+
+
+
+
+
+/*ventanas de eliminar y desactivar*/
+.modales {
+    display: none; 
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/*Cuerpo del modal*/
+.modales-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 50px;
+    border: 4px solid #000;
+    width: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    height: auto;
+}
+
+.modales-content h2 {
+    color: black;
+    text-align: left;
+}
+
+/* Contenedor que pone fechas a la izquierda y motivo a la derecha */
+.contenedor-campos {
+    display: flex;
+    justify-content:left;
+    gap: 40px;
+    margin-bottom: 25px;
+    padding: 30px;
+    padding-top: 80px;
+}
+
+/* Agrupación de fechas */
+.columna-fechas {
+    display: flex;
+    flex-direction: column;
+    justify-content:left;    
+    gap: 50px;
+}
+
+/* Campo motivo */
+.campo-desactivar {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    padding-left: 100px;
+}
+
+.campo-desactivar select {
+    padding: 6px;
+    border: 2px solid #000;
+    width: 220px; 
+}
+
+.fecha-inicio label{
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: flex;
+}
+
+.fecha-final label{
+    margin-bottom: 15px;     
+    font-weight: bold;
+    display: flex;
+}
+.campo-desactivar label {
+    margin-bottom: 15px;     
+    font-weight: bold;     
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <link rel="stylesheet" href="/css/style_menu.css">
+</head>
+<body>
+
+        <div class="titulo_asadero">
+            <h1>The Broaster House - ADMINISTRADOR</h1>           
+        </div>
+
+    <header>
+        <div>
+            <img src="/img/logobroasterhouse.png" class="logo_arriba">
+            <img src="/img/logobroasterhouse.png" class="logo_arriba">
+            <img src="/img/logobroasterhouse.png" class="logo_arriba">
+        </div>
+    </header>
+    
+    <main>
+        <aside class="sidebar">
+            <div class="user-info">
+                ADMINISTRADORA <br>
+                PEPITA PEREZ
+            </div>
+
+            <div class="menu">
+                <button class="menu-item" onclick="toggleSubmenu('usuarios')">Gestión de Usuarios</button>
+                <div class="submenu" id="usuarios">
+                    <button onclick="cargarModalExterno('modal_crear_usuario.html')">Crear Usuario</button>
+                    <button onclick="cargarModalExterno('modal_modificar_usuario.html')">Modificar Usuario</button>
+                    <button onclick="cargarModalExterno('modal_eliminar_usuario.html')">Eliminar Usuario</button>
+                    <button onclick="cargarModalExterno('modal_desactivar_usuario.html')">Desactivar Usuario</button>
+                </div>
+
+                <button class="menu-item" onclick="toggleSubmenu('ventas')">Gestión Ventas</button>
+                <div class="submenu" id="ventas">
+                    <button onclick="cargarModalExterno('modal_registrar_ventas.html')">Registrar Ventas</button>
+                    <button onclick="cargarModalExterno('modal_historial_ventas.html')">Historial de Ventas</button>
+                    <button onclick="cargarModalExterno('modal_ventas_dia.html')">Ventas del Día</button>
+                    <button onclick="cargarModalExterno('modal_consultar_ventas.html')">Consulta de Ventas</button>
+                </div>
+
+                <button class="menu-item" onclick="toggleSubmenu('inventario')">Gestión Inventario</button>
+                <div class="submenu" id="inventario">
+                    <button onclick="cargarModalExterno('modal_registro_producto.html')">Registro de Producto</button>
+                    <button onclick="cargarModalExterno('modal_actualizar_inventario.html')">Actualizar Inventario</button>
+                    <button onclick="cargarModalExterno('modal_consultar_inventario.html')">Consultar Inventario</button>
+                    <button onclick="cargarModalExterno('modal_alertas.html')">Alertas</button>
+                    <button onclick="cargarModalExterno('modal_actualizar_stock.html')">Actualizar Stock</button>
+                    <button onclick="cargarModalExterno('modal_reportes.html')">Reportes</button>
+
+                </div>
+                    
+                <button class="menu-itemcerrar" onclick="cerrarSesion('cerrar')">Cerrar Sesión</button>
+
+            </div>
+        </aside>
+    
+    </main>
+
+    <div id="contenedorModal"></div>
+
+        <footer>
+            <p>© 2025 Elaborado por Sandra Esquivel - ADSO- 3070230</p>
+        </footer>
+
+    <script src="/js/script.menu.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
