@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Principal</title>
+    <title>Gestion de Usuarios</title>
     <link rel="stylesheet" href="/css/style_menu.css">
 </head>
 <body>
@@ -25,20 +25,20 @@
 <div id="modalCrearUsuario1" class="modal">
     <div class="modal-content">
         <span class="close" onclick="cancelarProceso('modalCrearUsuario1')">&times;</span>
-        <h2>Nuevo Usuario - Paso 1</h2>       
+        <h2>Creacion del Nuevo Usuario - Paso 1</h2>       
         <form id="llenarCampos1"> 
             <div  class="casilla_fecha">
-                <label>Fecha de creación:</label>
+                <label>Fecha de la creación:</label>
                 <input type="text" class= "campo-fecha" name="fecha" readonly><br><br>
             </div>
 
             <div>
-                <label>Nombres:</label>
+                <label>Nombre:</label>
                 <input type="text" name="nombre"><br><br>
             </div>
 
             <div>
-                <label>Apellidos:</label>
+                <label>Apellido:</label>
                 <input type="text" name="apellido"><br><br>
             </div>
 
@@ -55,7 +55,7 @@
 
                 <label>
                 <select name="tipoDocumento">
-                    <option value="" disabled selected>Seleccione tipo de documento</option>
+                    <option value="" disabled selected>Seleccione su tipo de documento</option>
                     <option value="CC">CC</option>
                     <option value="TI">TI</option>
                     <option value="CE">CE</option>
@@ -65,7 +65,7 @@
             </div>
 
             <div>
-                <label>Correo electrónico:</label>
+                <label>Correo electrónico personal:</label>
                 <input type="email" name="correoPersonal"><br><br>
             </div>
 
@@ -86,7 +86,7 @@
 <div id="modalCrearUsuario2" class="modal">
     <div class="modal-content">
         <span class="close" onclick="cancelarProceso('modalCrearUsuario2')">&times;</span>
-        <h2>Nuevo Usuario - Paso 2</h2>       
+        <h2>Creacion del Nuevo Usuario - Paso 2</h2>       
         <form id="llenarCampos2">
             <div>
                 <label>Id del Empleado:</label>
@@ -131,7 +131,7 @@
 <div id="modalCrearUsuario3" class="modal">
     <div class="modal-content">
         <span class="close" onclick="cancelarProceso('modalCrearUsuario3')">&times;</span>
-        <h2>Nuevo Usuario - Paso 3</h2>
+        <h2>Creacion del Nuevo Usuario - Paso 3</h2>
         <h3>Funciones y permisos de Nuevo Usuario</h3>       
 
         <form id="llenarCampos3">
